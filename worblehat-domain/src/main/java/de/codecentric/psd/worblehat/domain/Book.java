@@ -17,9 +17,9 @@ public class Book implements Serializable {
   private String title;
   private String author;
   private String edition;
-
   private String isbn;
   private int yearOfPublication;
+  private String description;
 
   @OneToOne(mappedBy = "borrowedBook", orphanRemoval = true)
   private Borrowing borrowing;
@@ -51,12 +51,33 @@ public class Book implements Serializable {
      * Alternative ideas: just use a setter if it's a non-mandatory attribute or provide an alternative constructor.
      * You might also consider to implement a builder pattern.
      */
+    this(title, author, edition, isbn, yearOfPublication, "");
+  }
+
+  /**
+   * Creates a new book instance.
+   *
+   * @param title the title
+   * @param author the author
+   * @param edition the edition
+   * @param isbn the isbn
+   * @param yearOfPublication the yearOfPublication
+   * @param description the description
+   */
+  public Book(
+      @Nonnull String title,
+      @Nonnull String author,
+      @Nonnull String edition,
+      @Nonnull String isbn,
+      int yearOfPublication,
+      @Nonnull String description) {
     super();
     this.title = title;
     this.author = author;
     this.edition = edition;
     this.isbn = isbn;
     this.yearOfPublication = yearOfPublication;
+    this.description = description;
   }
 
   public String getTitle() {
@@ -118,6 +139,9 @@ public class Book implements Serializable {
     return "Book{"
         + "title='"
         + title
+        + '\''
+        + ", description='"
+        + description
         + '\''
         + ", author='"
         + author

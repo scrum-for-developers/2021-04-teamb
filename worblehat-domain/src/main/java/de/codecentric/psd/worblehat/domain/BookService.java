@@ -10,6 +10,14 @@ public interface BookService {
   Optional<Book> createBook(
       String title, String author, String edition, String isbn, int yearOfPublication);
 
+  Optional<Book> createBook(
+      String title,
+      String author,
+      String edition,
+      String isbn,
+      int yearOfPublication,
+      String description);
+
   Book updateBook(Book aBook);
 
   boolean bookExists(String isbn);
