@@ -35,7 +35,7 @@ maven lifecycle phases, are executed by differen maven plugins, and follow a dif
     <include>**/Test*.java</include>
     <include>**/*Test.java</include>
     <include>**/*Tests.java</include>
-    <include>**/*TestCase.java</include>
+    <include>**/*TestCase.java</include> 
 </includes>
 ```
 
