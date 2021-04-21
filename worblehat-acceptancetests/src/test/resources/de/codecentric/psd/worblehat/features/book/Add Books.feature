@@ -14,6 +14,16 @@ Feature: Adding a new book to the library
             | author   | Terry Pratchett |
             | year     | 1989            |
             | isbn     | 123456789X      |
+            | description     | The book is about...    |
+
+    Scenario:
+      Given an empty library
+
+      When a librarian adds a random book and the "description" of that book is ""
+
+      Then the booklist shows that book with "description" as ""
+
+
 
     Scenario: Adding books with special characters
 
