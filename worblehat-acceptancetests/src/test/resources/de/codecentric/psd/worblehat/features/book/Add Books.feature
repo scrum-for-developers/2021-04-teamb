@@ -19,9 +19,17 @@ Feature: Adding a new book to the library
 
       Given an empty library
 
-      When a librarian adds a random book and the "title" of that book is "  X  "
+      When a librarian adds a random book and the "title" of that book is "ç%&@+\""
 
-      Then the booklist shows that book with "title" as "  X  "
+      Then the booklist shows that book with "title" as "ç%&@+\""
+
+    Scenario: Adding books with spaces
+
+      Given an empty library
+
+      When a librarian adds a random book and the "isbn" of that book is "  1093695463  "
+
+      Then the booklist shows that book with "isbn" as "1093695463"
 
 
     Scenario Outline: There can be multiple copies of the same book with the same ISBN
