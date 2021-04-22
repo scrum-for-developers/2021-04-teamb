@@ -47,7 +47,7 @@ public class BookList {
     seleniumAdapter.gotoPage(Page.BOOKLIST);
     HtmlBookList htmlBookList = seleniumAdapter.getTableContent(PageElement.BOOKLIST);
     String isbn = context.get("LAST_INSERTED_BOOK_ISBN");
-    HtmlBook htmlBook = htmlBookList.getBookByIsbn(isbn);
+    HtmlBook htmlBook = htmlBookList.getBookByIsbn(isbn.trim());
     switch (property) {
       case "title":
         assertThat(htmlBook.getTitle(), is(value));
