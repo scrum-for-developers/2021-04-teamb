@@ -50,5 +50,4 @@ class ISBNConstraintValidatorTest {
     boolean actual = isbnConstraintValidator.isValid("9781847941107", constraintValidatorContext);
     assertTrue(actual);
   }
-
 }

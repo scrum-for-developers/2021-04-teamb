@@ -1,6 +1,6 @@
 Feature: Adding a new book to the library
 
-    Scenario Outline: Adding various books
+    Scenario Outline: Adding various books isbn10
 
         Given an empty library
 
@@ -14,7 +14,7 @@ Feature: Adding a new book to the library
             | author   | Terry Pratchett |
             | year     | 1989            |
             | isbn     | 123456789X      |
-            | isbn     | 123456789X123      |
+            | isbn     | 9783540778462   |
 
     Scenario: Adding books with special characters
 
@@ -49,7 +49,6 @@ Feature: Adding a new book to the library
             | Sourcery | Terry Pratchett | 1       | 1989 | 0552131075 | Terry Pratchett        | Sourcery             | 2  |
             | Sourcery | Terry Pratchett | 1       | 1989 | 0552131075 | XX_DIFFERENT_AUTHOR_XX | Sourcery             | 1  |
             | Sourcery | Terry Pratchett | 1       | 1989 | 0552131075 | Terry Pratchett        | XX_DIFERENT_TITLE_XX | 1  |
-            | HP | Rowling | 1       | 1989 | 0552131075123 | Rowling        | HP | 1  |
 
 
 
