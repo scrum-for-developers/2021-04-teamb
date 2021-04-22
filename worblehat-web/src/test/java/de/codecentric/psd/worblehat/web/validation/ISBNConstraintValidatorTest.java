@@ -44,4 +44,11 @@ class ISBNConstraintValidatorTest {
     boolean actual = isbnConstraintValidator.isValid("0123459789", constraintValidatorContext);
     assertFalse(actual);
   }
+
+  @Test
+  void shouldReturnTrueIfValidISBN13() throws Exception {
+    boolean actual = isbnConstraintValidator.isValid("9781847941107", constraintValidatorContext);
+    assertTrue(actual);
+  }
+
 }
