@@ -6,7 +6,7 @@
 --changeset author:id
 -- Alter Table: see https://dev.mysql.com/doc/refman/8.0/en/alter-table.html
 -- Data Types: https://dev.mysql.com/doc/refman/8.0/en/data-types.html
-ALTER TABLE <TABLE_NAME> ADD COLUMN <COLUMN_NAME> <DATA_TYPE>;
+ALTER TABLE book ADD COLUMN description VARCHAR(4000);
 
 -- most used data types:
 -- INT
